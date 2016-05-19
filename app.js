@@ -19,7 +19,7 @@ if ('serviceWorker' in navigator) {
 
 // function for loading each image via XHR
 function SampleAPIRequest(url) {
-  return new Promise(resolve, reject){
+  return new Promise(function(resolve, reject){
     var xhttp = new XMLHttpRequest;
     xhttp.open('GET', url, true);
     xhttp.onload = function () {
@@ -33,8 +33,7 @@ function SampleAPIRequest(url) {
       reject(xhttp.statusText);
     }
     xhttp.send();
-  }
-}
+  })}
 
 SampleAPIRequest('https://api.streamable.com/videos/3sdm').then(function(response) {
   console.log(response);
