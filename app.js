@@ -39,7 +39,7 @@ window.onload = function () {
   console.log('Window Loaded');
   SampleAPIRequest('https://api.streamable.com/videos/3sdm').then(function (response) {
     console.log('Response:');
-    cosole.dir(response);
+    console.dir(response);
   }).catch(function (error) {
     console.log('Error:' + error);
   })
