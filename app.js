@@ -25,7 +25,7 @@ window.onload = function () {
       xhttp.open('GET', url, true);
       xhttp.onload = function () {
         if (xhttp.status = 200) {
-          resolve(JSON.parse(xhttp.response));
+          resolve(xhttp.response);
         } else {
           reject(xhttp.statusText);
         }
