@@ -1,21 +1,21 @@
-// // register service worker
+// register service worker
 
-// if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker.register('/serviceworkerdemo/sw.js', { scope: '/serviceworkerdemo/' }).then(function (reg) {
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/serviceworkerdemo/sw.js', { scope: '/serviceworkerdemo/' }).then(function (reg) {
 
-//     if (reg.installing) {
-//       console.log('Service worker installing');
-//     } else if (reg.waiting) {
-//       console.log('Service worker installed');
-//     } else if (reg.active) {
-//       console.log('Service worker active');
-//     }
+    if (reg.installing) {
+      console.log('Service worker installing');
+    } else if (reg.waiting) {
+      console.log('Service worker installed');
+    } else if (reg.active) {
+      console.log('Service worker active');
+    }
 
-//   }).catch(function (error) {
-//     // registration failed
-//     console.log('Registration failed with ' + error);
-//   });
-// };
+  }).catch(function (error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+};
 
 // function for loading each image via XHR
 window.onload = function () {
