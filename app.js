@@ -18,7 +18,8 @@
 // };
 
 // function for loading each image via XHR
-function SampleAPIRequest(url) {
+Window.onload = function () {
+  function SampleAPIRequest(url) {
   return new Promise(function (resolve, reject) {
     var xhttp = new XMLHttpRequest;
     xhttp.open('GET', url, true);
@@ -35,7 +36,6 @@ function SampleAPIRequest(url) {
     xhttp.send();
   })
 }
-Window.onload = function () {
   console.log('Window Loaded');
   SampleAPIRequest('https://api.streamable.com/videos/3sdm').then(function (response) {
     console.log('Response:' + response);
