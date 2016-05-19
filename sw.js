@@ -5,7 +5,7 @@ this.addEventListener('install', function(event) {
         '/serviceworkerdemo/',
         '/serviceworkerdemo/index.html',
         '/serviceworkerdemo/style.css',
-        '/serviceworkerdemos/app.js',
+        '/serviceworkerdemo/app.js',
       ]);
     })
   );
