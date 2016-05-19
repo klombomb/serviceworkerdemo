@@ -18,24 +18,24 @@
 // };
 
 // function for loading each image via XHR
-Window.onload = function () {
+window.onload = function () {
   function SampleAPIRequest(url) {
-  return new Promise(function (resolve, reject) {
-    var xhttp = new XMLHttpRequest;
-    xhttp.open('GET', url, true);
-    xhttp.onload = function () {
-      if (xhttp.status = 200) {
-        resolve(JSON.parse(xhttp.response));
-      } else {
+    return new Promise(function (resolve, reject) {
+      var xhttp = new XMLHttpRequest;
+      xhttp.open('GET', url, true);
+      xhttp.onload = function () {
+        if (xhttp.status = 200) {
+          resolve(JSON.parse(xhttp.response));
+        } else {
+          reject(xhttp.statusText);
+        }
+      }
+      xhttp.onerror = function () {
         reject(xhttp.statusText);
       }
-    }
-    xhttp.onerror = function () {
-      reject(xhttp.statusText);
-    }
-    xhttp.send();
-  })
-}
+      xhttp.send();
+    })
+  }
   console.log('Window Loaded');
   SampleAPIRequest('https://api.streamable.com/videos/3sdm').then(function (response) {
     console.log('Response:' + response);
