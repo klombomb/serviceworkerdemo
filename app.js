@@ -36,7 +36,7 @@ function SampleAPIRequest(url) {
   })}
 
 SampleAPIRequest('https://api.streamable.com/videos/3sdm').then(function(response) {
-  console.log(response);
+  console.log('Response:' + response);
 }).then(function (error) {
-  console.log(error);
+  console.log('Error:' + error);
 })
