@@ -35,10 +35,11 @@ function SampleAPIRequest(url) {
     xhttp.send();
   })
 }
-Window.onload = function () {
+Document.addEventListener("DOMContentLoaded", function() {
   SampleAPIRequest('https://api.streamable.com/videos/3sdm').then(function (response) {
     console.log('Response:' + response);
   }).then(function (error) {
     console.log('Error:' + error);
   })
-}
+})
+ 
